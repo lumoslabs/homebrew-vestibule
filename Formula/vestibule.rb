@@ -7,11 +7,11 @@ class Vestibule < Formula
 
   if OS.mac?
     url "https://github.com/lumoslabs/vestibule/releases/download/v1.3.0/vestibule_1.3.0_Darwin_x86_64.tar.gz"
-    sha256 "6ea0610e9d3adf51f00e4923b29130a50cbe8b079d827122ba31a70e352f364d"
+    sha256 "f6790449842c9d2db3b57980ab0f5c8a60fe5fbc84aeb00be2949f8204b3c829"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/lumoslabs/vestibule/releases/download/v1.3.0/vestibule_1.3.0_Linux_x86_64.tar.gz"
-      sha256 "2619c5cfb2cc9169667309ab2faf4e23b977078acc13f43b630e9fbcb9a42210"
+      sha256 "ff11a62cabd7d4e3a729c9fb7ee5d74e18bbee46b0dfdb54a235afdde5ebdcce"
     end
   end
 
