@@ -2,9 +2,18 @@
 class Vestibule < Formula
   desc "Gather secrets from various backends and inject them into the process environment"
   homepage "https://github.com/lumoslabs/vestibule"
-  url "https://github.com/lumoslabs/vestibule/releases/download/v1.2.10/vestibule_1.2.10_Darwin_x86_64.tar.gz"
-  version "1.2.10"
-  sha256 "146cef5019d0ce9de70ffe4af66553467de6554559ce52337ac1fb116a95e9c8"
+  version "1.3.0"
+  bottle :unneeded
+
+  if OS.mac?
+    url "https://github.com/lumoslabs/vestibule/releases/download/v1.3.0/vestibule_1.3.0_Darwin_x86_64.tar.gz"
+    sha256 "6ea0610e9d3adf51f00e4923b29130a50cbe8b079d827122ba31a70e352f364d"
+  elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/lumoslabs/vestibule/releases/download/v1.3.0/vestibule_1.3.0_Linux_x86_64.tar.gz"
+      sha256 "2619c5cfb2cc9169667309ab2faf4e23b977078acc13f43b630e9fbcb9a42210"
+    end
+  end
 
   def install
     bin.install "vest"
